@@ -26,3 +26,10 @@ Route::get('/blog/{identificador}',function($identificador){
 Route::get('/blog/{nombre}/{identificador}',function($nombre,$identificador){
     return view('blog2',['identificador'=>$identificador,'nombre'=>$nombre]);
 })->where(array('nombre' => '[a-zA-Z]+','identificador' => '[0-9]+'));
+
+Route::get('/saludo','SaludoController@saludo');
+
+Route::get('/saludo/{nombre}','SaludoController@saludoExterior');
+
+Route::get('/saludo/{nombre}/{color}','SaludoController@saludoColor');
+
