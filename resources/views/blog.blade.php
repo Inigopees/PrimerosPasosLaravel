@@ -2,5 +2,5 @@
 <h3>Blog</h3>
 
 <?php
-    echo "El identificador es: ".$identificador;
+        echo "El identificador del producto es: ".$identificador;    
 ?>

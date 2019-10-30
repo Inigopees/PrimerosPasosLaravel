@@ -22,3 +22,7 @@ Route::get('/contacto',function(){
 Route::get('/blog/{identificador}',function($identificador){
     return view('blog',['identificador'=>$identificador]);
 });
+
+Route::get('/blog/{nombre}/{identificador}',function($nombre,$identificador){
+    return view('blog2',['identificador'=>$identificador,'nombre'=>$nombre]);
+})->where(array('nombre' => '[a-zA-Z]+','identificador' => '[0-9]+'));
