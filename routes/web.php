@@ -17,19 +17,28 @@ Route::get('/', function () {
 
 Route::get('/contacto',function(){
     return view('contacto');
-});
+})->name('contacto');
 
 Route::get('/blog/{identificador}',function($identificador){
     return view('blog',['identificador'=>$identificador]);
-});
+})->name('identificador');
 
 Route::get('/blog/{nombre}/{identificador}',function($nombre,$identificador){
     return view('blog2',['identificador'=>$identificador,'nombre'=>$nombre]);
-})->where(array('nombre' => '[a-zA-Z]+','identificador' => '[0-9]+'));
+})->where(array('nombre' => '[a-zA-Z]+','identificador' => '[0-9]+'))->name('identidos');
 
-Route::get('/saludo','SaludoController@saludo');
+Route::get('saludo','SaludoController@saludo')->name('saludo');
 
-Route::get('/saludo/{nombre}','SaludoController@saludoExterior');
+Route::get('saludo/{nombre}','SaludoController@saludoExterior')->name('saludoNombre');
 
-Route::get('/saludo/{nombre}/{color}','SaludoController@saludoColor');
+Route::get('saludo/{color}/{nombre}','SaludoController@saludoColor')->name('saludoNombreColor');
 
+Route::get('/formulario',function(){
+    return view('Formulario');
+})->name('formulario');
+
+Route::get('/formulario2',function(){
+    return view('Formulario2');
+})->name('formulario2');
+
+Route::get('saludoPersonalizado','SaludoController@ejer43')->name('saludoPersonal');
