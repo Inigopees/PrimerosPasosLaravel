@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Formulario</title>
+        <title>Validacion</title>
     </head>
     <body>
         <form action="{{route('SaludoIdiomas')}}" method="post">

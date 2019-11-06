@@ -28,7 +28,7 @@
         <ul>
             <li><a href="{{route('formulario')}}">Ejercicio A</a></li>
             <li><a href="{{route('formulario2')}}">Ejercicio B</a></li>
-            <li><a href="">Ejercicio C</a></li>
+            <li><a href="{{route('formulario3')}}">Ejercicio C</a></li>
         </ul>
     </body>
 </html>

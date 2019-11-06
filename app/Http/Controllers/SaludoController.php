@@ -31,8 +31,8 @@ class SaludoController extends Controller
     }
 
     function ejer43b(request $request){
-        $nombre = $request->get('nombre');
-        $apellido = $request->get('apellido');
+        $nombre = $request->input('nombre');
+        $apellido = $request->input('apellido');
         $datos= file_get_contents("/home/ubuntu/LaravelBasic/database/data/saludos.json");
         $idiomas = json_decode($datos, true);
         $nombreCompleto = $nombre." ".$apellido;
@@ -40,12 +40,12 @@ class SaludoController extends Controller
     }
 
     function ejer43c(request $request){
-        $nombre = $request->get('nombre');
-        $apellido = $request->get('apellido');
+        $nombre = $request->input('nombre');
+        $apellido = $request->input('apellido');
         $datos= file_get_contents("/home/ubuntu/LaravelBasic/database/data/saludos.json");
         $idiomas = json_decode($datos, true);
         $nombreCompleto = $nombre." ".$apellido;
-        return view('Formulari2',['nombre'=>$nombreCompleto,'idiomas'=>$idiomas]);
+        return view('Formulario3',['nombre'=>$nombreCompleto,'idiomas'=>$idiomas]);
     }
     
     ///////////////////////////////////////////////////////////////////////

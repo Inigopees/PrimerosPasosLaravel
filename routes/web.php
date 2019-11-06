@@ -43,4 +43,10 @@ Route::get('/formulario2',function(){
     return view('Formulario2');
 })->name('formulario2');
 
-Route::get('SaludoMultidiomas','SaludoController@ejer43b')->name('SaludoIdiomas');
+Route::post('SaludoMultidiomas/post','SaludoController@ejer43b')->name('SaludoIdiomas');
+
+Route::get('/formulario3',function(){
+    return view('Formulario3');
+})->name('formulario3');
+
+Route::post('SaludoMultidiomas2','SaludoController@ejer43c')->name('SaludoIdiomas2');
