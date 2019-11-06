@@ -37,8 +37,10 @@ Route::get('/formulario',function(){
     return view('Formulario');
 })->name('formulario');
 
+Route::get('saludoPersonalizado','SaludoController@ejer43')->name('saludoPersonal');
+
 Route::get('/formulario2',function(){
     return view('Formulario2');
 })->name('formulario2');
 
-Route::get('saludoPersonalizado','SaludoController@ejer43')->name('saludoPersonal');
+Route::get('SaludoMultidiomas','SaludoController@ejer43b')->name('SaludoIdiomas');

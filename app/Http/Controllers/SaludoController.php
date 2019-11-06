@@ -33,9 +33,22 @@ class SaludoController extends Controller
     function ejer43b(request $request){
         $nombre = $request->get('nombre');
         $apellido = $request->get('apellido');
+        $datos= file_get_contents("/home/ubuntu/LaravelBasic/database/data/saludos.json");
+        $idiomas = json_decode($datos, true);
         $nombreCompleto = $nombre." ".$apellido;
-        return view('SaludoIdiomas',['nombre'=>$nombreCompleto]);
+        return view('multidiomas',['nombre'=>$nombreCompleto,'idiomas'=>$idiomas]);
     }
 
+    function ejer43c(request $request){
+        $nombre = $request->get('nombre');
+        $apellido = $request->get('apellido');
+        $datos= file_get_contents("/home/ubuntu/LaravelBasic/database/data/saludos.json");
+        $idiomas = json_decode($datos, true);
+        $nombreCompleto = $nombre." ".$apellido;
+        return view('Formulari2',['nombre'=>$nombreCompleto,'idiomas'=>$idiomas]);
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    //////////////////////////// 4.4  ////////////////////////////////////
  
 }

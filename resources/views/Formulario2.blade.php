@@ -3,10 +3,14 @@
         <title>Formulario</title>
     </head>
     <body>
-        <form action="{{route('')}}" method="post">
+        <form action="{{route('SaludoIdiomas')}}" method="get">
+        <label>Nombre: </label>
             <input type="text" name="nombre">
+            <br><br>
+            <label>Apellido: </label>
             <input type="apellido" name="apellido">
-            <input type="submit" value="enviar">
+            <br><br>
+            <input type="submit" value="Enviar">
         </form>
     </body>
 </html>
