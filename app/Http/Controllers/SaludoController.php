@@ -57,6 +57,6 @@ class SaludoController extends Controller
             'apellido'=>'required|min:2|max:15',
             'email'=>'required|email',
             'telefono'=>'regex:/????????'
-        ])
+        ]);
     }
 }
