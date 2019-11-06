@@ -3,14 +3,8 @@
         <title>Formulario</title>
     </head>
     <body>
-        <?php
-            if(isset($nombre) && isset($idiomas)){
-                foreach ($idiomas as $traduccion) {
-                    echo $traduccion['idioma']." : ".$traduccion['saludo']." ".$nombre."<br><br>";
-                }
-            }
-            else
-            {
+        <?php 
+            if(!isset($idiomas)){
         ?>
         <form action="{{route('SaludoIdiomas2')}}" method="post">
         <label>Nombre: </label>
@@ -22,6 +16,12 @@
             <input type="submit" name="boton" value="Enviar">
         </form>
         <?php
+            }
+            else
+            {
+                foreach ($idiomas as $traduccion) {
+                    echo $traduccion['idioma']." : ".$traduccion['saludo']." ".$nombre."<br><br>";
+                }
             }
         ?>
     </body>

@@ -51,4 +51,12 @@ class SaludoController extends Controller
     ///////////////////////////////////////////////////////////////////////
     //////////////////////////// 4.4  ////////////////////////////////////
  
+    function validacion(request $request){
+        $validatedData = $request->validate([
+            'nombre'=>'required|min:2|max:15',
+            'apellido'=>'required|min:2|max:15',
+            'email'=>'required|email',
+            'telefono'=>'regex:/????????'
+        ])
+    }
 }

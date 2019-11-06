@@ -50,3 +50,9 @@ Route::get('/formulario3',function(){
 })->name('formulario3');
 
 Route::post('SaludoMultidiomas2','SaludoController@ejer43c')->name('SaludoIdiomas2');
+
+Route::get('/validacion',function(){
+    return view('Validacion');
+})->name('validacion');
+
+Route::get('validar','SaludoController@validacion')->name('validacion');

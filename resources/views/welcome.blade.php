@@ -30,5 +30,10 @@
             <li><a href="{{route('formulario2')}}">Ejercicio B</a></li>
             <li><a href="{{route('formulario3')}}">Ejercicio C</a></li>
         </ul>
+        <h1>Tarea 4.4</h1>
+        <ul>
+            <li><a href="{{route('validacion')}}">Ejercicio A</a></li>
+            <li><a href="">Ejercicio B</a></li>
+        </ul>
     </body>
 </html>
