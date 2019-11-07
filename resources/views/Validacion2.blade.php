@@ -12,7 +12,7 @@
         </style>
     </head>
     <body>
-        <form action="{{route('')}}" method="get">
+        <form action="{{route('validacion2')}}" method="get">
             <label>Nombre: </label>
             <input type="text" name="nombre" value="{{old('nombre')}}">
             @if ($errors->has('nombre'))

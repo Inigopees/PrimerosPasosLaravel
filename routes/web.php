@@ -61,3 +61,4 @@ Route::get('/validacion2',function(){
     return view('Validacion');
 })->name('validacionForm2');
 
+Route::get('validar2','SaludoController@validacion')->name('validacion2');

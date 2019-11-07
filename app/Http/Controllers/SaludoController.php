@@ -64,4 +64,14 @@ class SaludoController extends Controller
         $telefono = $request->input('telefono');
         return view('MostrarDatos',['nombre'=>$nombre,'apellido'=>$apellido, 'email'=>$email, 'telefono'=>$telefono]);
     }
+
+    function validacion2(ContactoRequest $request){
+        
+        $nombre = $request->input('nombre');
+        $apellido = $request->input('apellido');
+        $email = $request->input('email');
+        $telefono = $request->input('telefono');
+        return view('MostrarDatos',['nombre'=>$nombre,'apellido'=>$apellido, 'email'=>$email, 'telefono'=>$telefono]);
+    }
+
 }
