@@ -4,6 +4,7 @@
     </head>
     <body>
         <form action="{{route('SaludoIdiomas')}}" method="post">
+        @csrf
         <label>Nombre: </label>
             <input type="text" name="nombre">
             <br><br>

@@ -43,7 +43,7 @@ Route::get('/formulario2',function(){
     return view('Formulario2');
 })->name('formulario2');
 
-Route::post('SaludoMultidiomas/post','SaludoController@ejer43b')->name('SaludoIdiomas');
+Route::post('SaludoMultidiomas','SaludoController@ejer43b')->name('SaludoIdiomas');
 
 Route::get('/formulario3',function(){
     return view('Formulario3');
@@ -53,6 +53,11 @@ Route::post('SaludoMultidiomas2','SaludoController@ejer43c')->name('SaludoIdioma
 
 Route::get('/validacion',function(){
     return view('Validacion');
-})->name('validacion');
+})->name('validacionForm');
 
 Route::get('validar','SaludoController@validacion')->name('validacion');
+
+Route::get('/validacion2',function(){
+    return view('Validacion');
+})->name('validacionForm2');
+

@@ -56,7 +56,12 @@ class SaludoController extends Controller
             'nombre'=>'required|min:2|max:15',
             'apellido'=>'required|min:2|max:15',
             'email'=>'required|email',
-            'telefono'=>'regex:/????????'
+            'telefono'=>'regex:/^[679][0-9]{8}$/'
         ]);
+        $nombre = $request->input('nombre');
+        $apellido = $request->input('apellido');
+        $email = $request->input('email');
+        $telefono = $request->input('telefono');
+        return view('MostrarDatos',['nombre'=>$nombre,'apellido'=>$apellido, 'email'=>$email, 'telefono'=>$telefono]);
     }
 }

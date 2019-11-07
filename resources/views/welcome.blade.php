@@ -32,8 +32,8 @@
         </ul>
         <h1>Tarea 4.4</h1>
         <ul>
-            <li><a href="{{route('validacion')}}">Ejercicio A</a></li>
-            <li><a href="">Ejercicio B</a></li>
+            <li><a href="{{route('validacionForm')}}">Ejercicio A</a></li>
+            <li><a href="{{route('validacionForm2')}}">Ejercicio B</a></li>
         </ul>
     </body>
 </html>
