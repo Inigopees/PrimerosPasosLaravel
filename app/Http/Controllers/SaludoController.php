@@ -67,10 +67,15 @@ class SaludoController extends Controller
 
     function validacion2(ContactoRequest $request){
         
+        $validatedData = $request->validate([
+            'dni'=>'required, new DniRule'
+        ]);
         $nombre = $request->input('nombre');
         $apellido = $request->input('apellido');
         $email = $request->input('email');
         $telefono = $request->input('telefono');
+        $dni = $request->input('dni');
+
         return view('MostrarDatos',['nombre'=>$nombre,'apellido'=>$apellido, 'email'=>$email, 'telefono'=>$telefono]);
     }
 
