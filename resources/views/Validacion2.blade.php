@@ -37,8 +37,10 @@
                 <a class="error">{{ $errors->first('telefono') }}</a>
             @endif
             <br><br>
+            <label>DNI</label>
+            <input type="texto" name="dni" value="{{old('dni')}}">
+            <br><br>
             <input type="submit" value="Enviar">
-
           <!--  @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
